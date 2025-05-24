@@ -36,11 +36,13 @@ let computerScore = 0;
 
 
 
-// function playRound(humanChoice, computerChoice){
-//     let humanChoice = hChoice.toLowerCase();
-//     let computerChoice = cChoice;
-//     if (humanChoice==="rock" && computerChoice==="scissors"){
-//         alert("You win! Rock beats Scissors.");
-//     }
-// }
+function playRound(humanChoice, computerChoice){
+    let humanChoice = hChoice.toLowerCase();
+    let computerChoice = cChoice;
+    if (humanChoice==="rock" && computerChoice==="scissors"){
+        alert("You win! Rock beats Scissors.");
+    }
+}
+
+
 
