@@ -47,5 +47,26 @@ body {
     border-style: solid;
     border-color: black;
     border-width: 5px;
+    border-radius: 10px;
 }
 
+.icons{
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+}
+
+.humanIcons, .compIcons{
+    display: flex;
+    flex-direction: column;
+}
+
+
+img{
+    width: 85%;
+    height: 85%;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+}
