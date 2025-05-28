@@ -61,7 +61,7 @@ function playRound(humanChoice, computerChoice){
         computerScore+=1;
     }
     else if (humanChoice===computerChoice){
-        alert("It's a tie!")
+        alert("It's a tie!");
     }
 
 }
