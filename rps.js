@@ -6,6 +6,14 @@
 
 const choices = ["rock", "paper", "scissors"];
 
+
+const humanIcons = document.querySelector(".humanIcons");
+function checkFunction(){
+    alert("yay, check works!");
+}
+
+humanIcons.addEventListener("click", checkFunction);
+
 function getComputerChoice(){
     const ranInd = Math.floor(Math.random()*choices.length);
     return choices[ranInd];
@@ -23,13 +31,6 @@ let humanScore = 0;
 let computerScore = 0;
 
 // STEP 3: Play the round
-
-// If human plays rock and computer plays scissors, human wins
-// If human plays rock and computer plays paper, human loses
-// If human plays scissors and computer plays paper, human wins
-// If human plays scissors and computer plays rock, human loses
-// If human plays paper and computer plays rock, human wins
-// If human plays paper and computer plays scissors, human loses
 
 
 function playRound(humanChoice, computerChoice){
