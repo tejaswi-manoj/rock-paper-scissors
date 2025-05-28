@@ -1,40 +1,42 @@
-// STEP 1: Get the computer choice
 
-// Get a random number between 0 and 1. 
-// Multiply that number with 3, which is the number of choices in this case. Thus, there are 3 possibilities - 0, 1, or 2
-// 0 --> return "rock", 1 --> return "paper", 2 --> return "scissors"
+let humanScore = 0;
+let computerScore = 0;
+let humanChoice;
 
 const choices = ["rock", "paper", "scissors"];
 
-
 const humanIcons = document.querySelector(".humanIcons");
-function checkFunction(){
-    alert("yay, check works!");
+// const humanRock = document.querySelector(".humanRock");
+// const humanPaper = document.querySelector(".humanPaper");
+// const humanScissors = document.querySelector(".humanScissors");
+
+
+humanRock.addEventListener("click", humanPlaysRock);
+humanPaper.addEventListener("click", humanPlaysPaper);
+humanScissors.addEventListener("click", humanPlaysScissors);
+
+function humanPlaysRock(){
+    humanChoice = "rock";
+    return humanChoice;
 }
 
-humanIcons.addEventListener("click", checkFunction);
+function humanPlaysPaper(){
+    humanChoice = "paper";
+    return humanChoice;
+}
+function humanPlaysScissors(){
+    humanChoice = "scissors";
+    return humanChoice;
+}
 
 function getComputerChoice(){
     const ranInd = Math.floor(Math.random()*choices.length);
     return choices[ranInd];
 }
 
-// STEP 2: Get the human choice
-// Get the input from the human - this will be typed in.
-
-function getHumanChoice(){
-    hChoice = prompt("What is your choice - Rock, Paper, or Scissors?")
-    return hChoice;
-}
-
-let humanScore = 0;
-let computerScore = 0;
-
-// STEP 3: Play the round
-
-
 function playRound(humanChoice, computerChoice){
 
+    
     humanChoice = humanChoice.toLowerCase();
 
     if (humanChoice==="rock" && computerChoice==="scissors"){
