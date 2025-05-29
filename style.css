@@ -61,7 +61,9 @@ body {
     flex-direction: column;
 }
 
-
+#human{
+    border-color: black;
+}
 img{
     width: 85%;
     height: 85%;
@@ -70,3 +72,14 @@ img{
     border-color: black;
     border-width: 5px;
 }
+
+/* toggle */
+.greenBorder {
+    border-color: green;
+}
+
+.redBorder {
+    border-color: red;
+}
+
+
