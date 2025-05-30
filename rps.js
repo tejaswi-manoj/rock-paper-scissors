@@ -116,3 +116,19 @@ function displayScore(){
     document.getElementById("hScore").textContent = humanScore;
     document.getElementById("cScore").textContent = compScore;
 }
+
+function displayWinner(){
+    if (humanScore>compScore){
+        document.getElementById("humanWins").textContent = "HUMAN WINS!";
+    }
+
+    else if (compScore>humanScore){
+        document.getElementById("compWins").textContent = "COMPUTER WINS!";
+    }
+    
+    else {
+        document.getElementById("humanWins").textContent = "IT'S A TIE!";
+        document.getElementById("compWins").textContent = "IT'S A TIE!";
+    }
+
+}

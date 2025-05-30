@@ -28,7 +28,6 @@ body {
 
 .human, .computer{
     display: flex;
-    justify-content: center;
     gap: 10px;
 }
 
@@ -54,21 +53,24 @@ body {
 
 .icons{
     display: flex;
-    gap: 80px;
+    gap: 60px;
     justify-content: center;
+    align-items: center;
 }
 
 .humanIcons, .compIcons{
     display: flex;
     flex-direction: column;
+    gap:5px;
 }
 
 #human{
     border-color: black;
 }
+
 img{
-    width: 80%;
-    height: 80%;
+    width: 75%;
+    height: 75%;
     border-radius: 20px;
     border-style: solid;
     border-color: black;
@@ -78,6 +80,11 @@ img{
 /* toggle */
 .blackBorder {
     border-color: black;
+}
+
+#humanWins, #compWins{
+    font-family: 'Jaro';
+    font-size: 20px;   
 }
 
 
