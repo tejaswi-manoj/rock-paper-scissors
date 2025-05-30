@@ -74,12 +74,9 @@ img{
 }
 
 /* toggle */
-.greenBorder {
-    border-color: green;
+.blackBorder {
+    border-color: black;
 }
 
-.redBorder {
-    border-color: red;
-}
 
 

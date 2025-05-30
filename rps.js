@@ -10,55 +10,70 @@ const humanRock = document.querySelector(".humanRock");
 const humanPaper = document.querySelector(".humanPaper");
 const humanScissors = document.querySelector(".humanScissors");
 
+const images = document.querySelectorAll("img");
+
 // document.querySelector(".humanIcons").addEventListener("click", function win = (e) => {
 //     e.target.classList.toggle("greenBorder");
-//     setTimeout(() => {
-//         e.target.classList.toggle("blackBorder");
-//     }, 1000);
 // })
-
 
 document.querySelector(".humanRock").addEventListener("click", (e) => {
 
-    if (getComputerChoice()==="scissors"){
+    const compChoice = getComputerChoice();
+
+    if (compChoice==="scissors"){
         document.getElementById("humanRock").style.borderColor="green";
         document.getElementById("compScissors").style.borderColor="red";
-    } else if (getComputerChoice()==="paper"){
+    } else if (compChoice==="paper"){
         document.getElementById("humanRock").style.borderColor="red";
         document.getElementById("compPaper").style.borderColor="green";
     } else {
         document.getElementById("humanRock").style.borderColor="blue";
         document.getElementById("compRock").style.borderColor="blue";
     }
-        
+
+    setTimeout(() => {document.querySelectorAll("img").forEach(img => img.style.borderColor = "black");
+    }, 2000);
+
 })
 
 document.querySelector(".humanPaper").addEventListener("click", (e) => {
 
-    if (getComputerChoice()==="rock"){
+    const compChoice = getComputerChoice();
+
+    if (compChoice==="rock"){
         document.getElementById("humanPaper").style.borderColor="green";
         document.getElementById("compRock").style.borderColor="red";
-    } else if (getComputerChoice()==="scissors"){
+    } else if (compChoice==="scissors"){
         document.getElementById("humanPaper").style.borderColor="red";
         document.getElementById("compScissors").style.borderColor="green";
     } else {
         document.getElementById("humanPaper").style.borderColor="blue";
         document.getElementById("compPaper").style.borderColor="blue";
     }
+
+    setTimeout(() => {document.querySelectorAll("img").forEach(img => img.style.borderColor = "black");
+    }, 2000);
+
 })
 
 document.querySelector(".humanScissors").addEventListener("click", (e) => {
 
-    if (getComputerChoice()==="paper"){
+    const compChoice = getComputerChoice();
+
+    if (compChoice==="paper"){
         document.getElementById("humanScissors").style.borderColor="green";
         document.getElementById("compPaper").style.borderColor="red";
-    } else if (getComputerChoice()==="rock"){
+    } else if (compChoice==="rock"){
         document.getElementById("humanScissors").style.borderColor="red";
         document.getElementById("compRock").style.borderColor="green";
     } else {
         document.getElementById("humanScissors").style.borderColor="blue";
         document.getElementById("compScissors").style.borderColor="blue";
     }
+
+    setTimeout(() => {document.querySelectorAll("img").forEach(img => img.style.borderColor = "black");
+    }, 2000);
+
 })
 
 
