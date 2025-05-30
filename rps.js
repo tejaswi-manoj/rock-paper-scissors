@@ -17,11 +17,16 @@ const humanScissors = document.querySelector(".humanScissors");
 
 const images = document.querySelectorAll("img");
 
+let gameActive = true;
 // document.querySelector(".humanIcons").addEventListener("click", function win = (e) => {
 //     e.target.classList.toggle("greenBorder");
 // })
 
 document.querySelector(".humanRock").addEventListener("click", (e) => {
+
+    if (!gameActive) return;
+
+    gameActive = false; // freeze during timeout
 
     const compChoice = getComputerChoice();
     rounds+=1;
@@ -40,7 +45,8 @@ document.querySelector(".humanRock").addEventListener("click", (e) => {
     }
 
     setTimeout(() => {document.querySelectorAll("img").forEach(img => img.style.borderColor = "black");
-    }, 3000);
+        if (rounds < 5) gameActive = true;
+    }, 2000);
 
     displayScore();
 
@@ -50,6 +56,10 @@ document.querySelector(".humanRock").addEventListener("click", (e) => {
 })
 
 document.querySelector(".humanPaper").addEventListener("click", (e) => {
+
+    if (!gameActive) return;
+
+    gameActive = false; // freeze during timeout
 
     const compChoice = getComputerChoice();
     rounds+=1;
@@ -68,7 +78,8 @@ document.querySelector(".humanPaper").addEventListener("click", (e) => {
     }
 
     setTimeout(() => {document.querySelectorAll("img").forEach(img => img.style.borderColor = "black");
-    }, 3000);
+        if (rounds < 5) gameActive = true;
+    }, 2000);
 
     displayScore();
 
@@ -79,6 +90,10 @@ document.querySelector(".humanPaper").addEventListener("click", (e) => {
 })
 
 document.querySelector(".humanScissors").addEventListener("click", (e) => {
+
+    if (!gameActive) return;
+
+    gameActive = false; // freeze during timeout
 
     const compChoice = getComputerChoice();
     rounds+=1;
@@ -97,7 +112,8 @@ document.querySelector(".humanScissors").addEventListener("click", (e) => {
     }
 
     setTimeout(() => {document.querySelectorAll("img").forEach(img => img.style.borderColor = "black");
-    }, 3000);
+        if (rounds < 5) gameActive = true;
+    }, 2000);
 
     displayScore();
 

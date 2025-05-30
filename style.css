@@ -53,9 +53,10 @@ body {
 
 .icons{
     display: flex;
-    gap: 60px;
+    gap: 50px;
     justify-content: center;
     align-items: center;
+    align-content: center;
 }
 
 .humanIcons, .compIcons{
@@ -83,8 +84,13 @@ img{
 }
 
 #humanWins, #compWins{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Jaro';
-    font-size: 20px;   
+    font-size: 60px;
+    width: 260px;
+    height: 660px;  
 }
 
 
