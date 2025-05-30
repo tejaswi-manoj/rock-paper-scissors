@@ -10,8 +10,6 @@ const humanRock = document.querySelector(".humanRock");
 const humanPaper = document.querySelector(".humanPaper");
 const humanScissors = document.querySelector(".humanScissors");
 
-
-
 // document.querySelector(".humanIcons").addEventListener("click", function win = (e) => {
 //     e.target.classList.toggle("greenBorder");
 //     setTimeout(() => {
@@ -22,39 +20,47 @@ const humanScissors = document.querySelector(".humanScissors");
 
 document.querySelector(".humanRock").addEventListener("click", (e) => {
 
-    humanChoice="rock";
-
     if (getComputerChoice()==="scissors"){
         document.getElementById("humanRock").style.borderColor="green";
-    } else{
+        document.getElementById("compScissors").style.borderColor="red";
+    } else if (getComputerChoice()==="paper"){
         document.getElementById("humanRock").style.borderColor="red";
+        document.getElementById("compPaper").style.borderColor="green";
+    } else {
+        document.getElementById("humanRock").style.borderColor="blue";
+        document.getElementById("compRock").style.borderColor="blue";
     }
         
 })
 
 document.querySelector(".humanPaper").addEventListener("click", (e) => {
-    
-    humanChoice="paper";
 
     if (getComputerChoice()==="rock"){
         document.getElementById("humanPaper").style.borderColor="green";
-    } else{
+        document.getElementById("compRock").style.borderColor="red";
+    } else if (getComputerChoice()==="scissors"){
         document.getElementById("humanPaper").style.borderColor="red";
+        document.getElementById("compScissors").style.borderColor="green";
+    } else {
+        document.getElementById("humanPaper").style.borderColor="blue";
+        document.getElementById("compPaper").style.borderColor="blue";
     }
-        
 })
 
 document.querySelector(".humanScissors").addEventListener("click", (e) => {
-    
-    humanChoice="scissors";
 
     if (getComputerChoice()==="paper"){
         document.getElementById("humanScissors").style.borderColor="green";
-    } else{
+        document.getElementById("compPaper").style.borderColor="red";
+    } else if (getComputerChoice()==="rock"){
         document.getElementById("humanScissors").style.borderColor="red";
+        document.getElementById("compRock").style.borderColor="green";
+    } else {
+        document.getElementById("humanScissors").style.borderColor="blue";
+        document.getElementById("compScissors").style.borderColor="blue";
     }
-        
 })
+
 
 
 
