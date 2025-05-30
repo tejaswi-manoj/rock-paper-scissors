@@ -48,6 +48,8 @@ body {
     border-color: black;
     border-width: 5px;
     border-radius: 10px;
+    font-size: 40px;
+    font-family: 'Jaro';
 }
 
 .icons{
@@ -65,12 +67,12 @@ body {
     border-color: black;
 }
 img{
-    width: 85%;
-    height: 85%;
+    width: 80%;
+    height: 80%;
     border-radius: 20px;
     border-style: solid;
     border-color: black;
-    border-width: 5px;
+    border-width: 10px;
 }
 
 /* toggle */
